@@ -3,10 +3,10 @@ from graphics import GraphWin, Circle, Line, Point, Text, color_rgb
 from math import cos, sin, pi
 
 # Constants (for easy tuning)
-WINDOW_WIDTH = 1000
-WINDOW_HEIGHT = 1000
-GRAPH_RADIUS = 420
-VERTEX_RADIUS = 25
+WINDOW_WIDTH = 900
+WINDOW_HEIGHT = 900
+GRAPH_RADIUS = 430
+VERTEX_RADIUS = 18
 LINES_WIDTH = 2
 
 BACKGROUNDCOLOR = color_rgb(219,219,219)
@@ -102,5 +102,5 @@ for vertex in vertexSet:
     labelText.setStyle("bold")
     labelText.draw(window)
 
-input("Press enter to quit the program...")
-window.close()
+print("Click the window to stop the program...")
+window.getMouse()
