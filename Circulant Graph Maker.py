@@ -3,13 +3,13 @@ from graphics import GraphWin, Circle, Line, Point, Text, color_rgb
 from math import cos, sin, pi
 
 # Constants (for easy tuning)
-WINDOW_WIDTH = 900
-WINDOW_HEIGHT = 900
-GRAPH_RADIUS = 430
-VERTEX_RADIUS = 18
+WINDOW_WIDTH = 800
+WINDOW_HEIGHT = 800
+GRAPH_RADIUS = 300
+VERTEX_RADIUS = 21
 LINES_WIDTH = 2
 
-BACKGROUNDCOLOR = color_rgb(219,219,219)
+BACKGROUNDCOLOR = "white"
 FILLCOLOR = color_rgb(205,255,255)
 
 # Classes/Functions:
@@ -20,7 +20,7 @@ class Vertex:
         self.yPos = yPos
 
 def construct_vertex(vertexNumber, totalVertices):
-    radialPos = 2 * pi * vertexNumber / totalVertices
+    radialPos = 2 * pi * vertexNumber / totalVertices - pi/2
     xPos = cos(radialPos)*GRAPH_RADIUS + WINDOW_WIDTH/2
     yPos = sin(radialPos)*GRAPH_RADIUS + WINDOW_HEIGHT/2
     return Vertex(vertexNumber, xPos, yPos)
